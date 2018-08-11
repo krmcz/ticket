@@ -1,3 +1,8 @@
 Rails.application.routes.draw do
-  # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
+
+  namespace :portal do
+    resources :tickets
+  end
+
+  root to: "portal/tickets#index"
 end

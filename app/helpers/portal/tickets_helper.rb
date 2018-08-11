@@ -1,0 +1,2 @@
+module Portal::TicketsHelper
+end
