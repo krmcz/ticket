@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  file_name: MyString
+  file_path: 
+  agancy_ticket_comment: one
+  delete_flag: false
+
+two:
+  file_name: MyString
+  file_path: 
+  agancy_ticket_comment: two
+  delete_flag: false
