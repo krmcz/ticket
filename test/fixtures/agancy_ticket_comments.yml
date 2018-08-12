@@ -1,0 +1,17 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  comment: MyString
+  change_sentence: MyString
+  user_account_id: 1
+  agancy_ticket: one
+  delete_flag: false
+  comment_update_at: 2018-08-12 08:59:22
+
+two:
+  comment: MyString
+  change_sentence: MyString
+  user_account_id: 1
+  agancy_ticket: two
+  delete_flag: false
+  comment_update_at: 2018-08-12 08:59:22

@@ -1,0 +1,33 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  subject: MyString
+  request: MyString
+  due_date: 2018-08-11
+  agency_id: 1
+  agency_staff_id: 1
+  category: 1
+  importance: 1
+  status: 1
+  tabelog_staff_id: 1
+  registrant_id: 1
+  read_check_at: 2018-08-11 11:01:49
+  which_ball: 
+  delete_flag: false
+  topic_update_at: 2018-08-11 11:01:49
+
+two:
+  subject: MyString
+  request: MyString
+  due_date: 2018-08-11
+  agency_id: 1
+  agency_staff_id: 1
+  category: 1
+  importance: 1
+  status: 1
+  tabelog_staff_id: 1
+  registrant_id: 1
+  read_check_at: 2018-08-11 11:01:49
+  which_ball: 
+  delete_flag: false
+  topic_update_at: 2018-08-11 11:01:49
