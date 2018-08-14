@@ -1,1 +1,35 @@
 h1 チケット新規登録画面
+
+= form_for(@agancy_ticket, url: portal_tickets_path) do |f|
+  = f.label :subject, '件名：'
+  = f.text_field :subject
+  br
+  = f.label :category, 'カテゴリ:'
+  = f.select :category, {'トラブル・クレーム対応' => 0, '未入金' => 1, 'リプレイス' => 2 }
+  br
+  = f.label :request, '依頼内容:'
+  = f.text_area :request
+  br
+  = f.label :importance, '特に重要:'
+  = f.check_box :importance
+  br
+  = f.label :due_date, '期限日:'
+  = f.date_field :due_date
+  br
+  = f.label :agency_id
+  = f.select :agency_id, {'代理店0' => 0, '代理店1' => 1}
+  br
+  = f.label :agency_staff_id
+  = f.select :agency_staff_id, {'田中' => 0, '鈴木' => 1}
+  br
+  = f.hidden_field :registrant_id, value: 1
+  = f.hidden_field :topic_update_at, value: '2018-08-12 14:21:37'
+
+  /commentモデルの保存
+  = f.fields_for :agancy_ticket_comments do |c|
+    = c.label :comment, 'コメント:'
+    = c.text_area :comment
+    = c.hidden_field :user_account_id, value: 1
+    = c.hidden_field :comment_update_at, value: '2018-08-12 14:59:40'
+  br
+  =f.submit '登録'
