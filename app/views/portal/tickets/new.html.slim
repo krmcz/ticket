@@ -4,6 +4,9 @@ h1 チケット新規登録画面
   = f.label :subject, '件名：'
   = f.text_field :subject
   br
+  = f.label :status, 'ステータス:'
+  = f.select :status, {'未着手': 0, '対応中': 1, '対応報告': 2, '完了': 3}
+  br
   = f.label :category, 'カテゴリ:'
   = f.select :category, {'トラブル・クレーム対応' => 0, '未入金' => 1, 'リプレイス' => 2 }
   br

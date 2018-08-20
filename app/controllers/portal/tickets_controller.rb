@@ -2,6 +2,9 @@ class Portal::TicketsController < ApplicationController
 
   def index
     @agancy_tickets = AgancyTicket.all
+    @agancy_tickets = @agancy_tickets.where(status: params[:status]) if params[:status].present?
+    @agancy_tickets = @agancy_tickets.where(agency_id: params[:agency_id]) if params[:agency_id].present?
+
   end
 
   def new
@@ -16,6 +19,7 @@ class Portal::TicketsController < ApplicationController
   end
 
   def show
+    @agancy_ticket = AgancyTicket.find(params[:id])
   end
 
   def edit

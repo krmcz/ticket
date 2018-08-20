@@ -1,6 +1,16 @@
 h1 チケットリスト画面
+h2 検索
+
+= form_tag root_path, method: :get do
+  = select_tag :status, options_for_select({'未着手': 0, '対応中': 1}, params[:status]), {prompt: "選択"}
+  = select_tag :agency_id, options_for_select({'代理店1': 0, '代理店2': 1}, params[:agency_id]), {prompt: "選択"}
+  = submit_tag '検索'
+  
 
 p リスト
 
 - @agancy_tickets.each do |ticket|
-  p 件名: #{ticket.subject}
+  = link_to ticket.subject, portal_ticket_path(ticket)
+  p ステータス #{ticket.status}
+  p 依頼事項 #{ticket.request}
+  p 代理店 #{ticket.agency_id}
