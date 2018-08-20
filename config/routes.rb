@@ -4,5 +4,6 @@ Rails.application.routes.draw do
     resources :tickets
   end
 
+
   root to: "portal/tickets#index"
 end
